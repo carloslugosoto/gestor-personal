@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+{% block 'title' %} Tarea {{tarea}} {% endblock %}
+{% block 'content' %}
+<span class="aux-btns">
+    <a href="{% url 'tareas' %}">Volver atrás</a>
+</span>
+<ul class="list">
+    <li><b>Titulo: </b>{{ tarea.titulo }}</li>
+    <li><b>Descripcion : </b>{{tarea.descripcion}}</li>
+    <li><b>Fecha de creación: </b>{{tarea.fecha_inicio}}</li>
+    <li><b>Fecha Finalización </b>{{tarea.fecha_fin}}</li>
+    <li><b>Prioridad (1...5): </b>{{tarea.prioridad}}</li>
+</ul>
+{% endblock %}
